@@ -1,2 +1,3 @@
 # JOBSHEET2_Pharmacy_Cashier
-Tugas Kelompok 3 POLINEMA SIB 1G
+Group Assignment 3 POLINEMA SIB 1G
+PHARMACY CASHIER 
