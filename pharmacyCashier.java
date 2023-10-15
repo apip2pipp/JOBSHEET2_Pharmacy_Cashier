@@ -1,5 +1,5 @@
 /**
- * Isengtok
+ * pharmacyCashier
  */
 import java.util.Scanner;
 public class pharmacyCashier {
