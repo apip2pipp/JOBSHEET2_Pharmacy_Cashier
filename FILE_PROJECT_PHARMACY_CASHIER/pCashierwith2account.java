@@ -10,8 +10,8 @@ public class pCashierwith2account {
 
     // DEKLARASI KALKULASI HARGA OBAT (FITUR 2)
     static int price = 0;
-    static int price_item[] = { 2000, 3500, 5900, 4000, 3300, 2500, 5000, 2000, 2000, 2000, 2000, 2000, 2000, 2000,
-            2000 };
+    static int price_item[] = { 2000, 3500, 5900, 4000, 3300, 2500, 5000, 1500, 3000, 2500, 3500, 4000, 2500, 4500,
+            3500 };
     static String menu = null;
     static String selected;
     static int total;
@@ -23,14 +23,14 @@ public class pCashierwith2account {
     static int MedicineDetail;
 
     // PAYMENT METHOD
-    static int methodPayment;
+    static String methodPayment;
 
     // DISCOUNT CALCULATION
     static int assuranceType;
-    static double Discon = 0;
-    static double discountPercetage;
+    static double discount = 0;
+    static double discountperList;
     static int totHarga;
-    static double totDisount;
+    static double totDiscount;
     static int pembayaran;
     static double change;
 
@@ -53,7 +53,7 @@ public class pCashierwith2account {
 
             }
         } while (!quit);
-
+        
     }
 
     static void tamplianKasir() {
@@ -96,7 +96,7 @@ public class pCashierwith2account {
                     break;
             }
         } while (!quit);
-        scanner.close();
+        
     }
 
     public static void menu() {
@@ -115,12 +115,13 @@ public class pCashierwith2account {
         Scanner sc1 = new Scanner(System.in);
 
         System.out.println();
-        System.out.println("!!!!! Directions for use !!!!!");
+        System.out.println("========================================================================================");
+        System.out.println("===============================!!!!! Directions for use !!!!!===========================");
+        System.out.println("========================================================================================\n"); 
         System.out.println("- Read the ingredients, rules and instructions for use of the medicine before taking it.");
         System.out.println("- Always talk to your doctor about any allergies you have before starting any medication.");
         System.out.println("- Consult your doctor if in doubt about the use of the medicine.");
-        System.out.println(
-                "- Pay attention to the expiration date of the medicine, and discard the medicine if it has passed the expiration date.");
+        System.out.println("- Pay attention to the expiration date of the medicine, and discard the medicine if it has passed the expiration date.");
         System.out.println();
         while (true) {
             System.out.println("++ Knowing Of Medicine : ++");
@@ -142,7 +143,7 @@ public class pCashierwith2account {
             System.out.println("16. back to menu ");
             System.out.println("===================================================================");
             System.out.print(
-                    "CHOOSE THE MEDICINE YOU WANT TO KNOW (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15-/16 Go back to menu) : ");
+                    "CHOOSE THE MEDICINE YOU WANT TO KNOW (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15 (16 Go back to menu) : ");
             MedicineDetail = sc1.nextInt();
             System.out.println();
             if (MedicineDetail == 1) {
@@ -216,11 +217,9 @@ public class pCashierwith2account {
                 System.out.println("===================================================================");
                 System.out.println();
             } else if (MedicineDetail == 11) {
-                System.out
-                        .println("======================================== INPEPSA =================================");
+                System.out.println("======================================== INPEPSA =================================");
                 System.out.println("Class of drug     : Obat Resep");
-                System.out
-                        .println("Benefits          : Mengatasi tukak lambung, ulkus duodenum, atau gastritis kronis");
+                System.out.println("Benefits          : Mengatasi tukak lambung, ulkus duodenum, atau gastritis kronis");
                 System.out.println("To be consumed by : Dewasa ");
                 System.out.println(
                         "====================================================================================");
@@ -261,6 +260,7 @@ public class pCashierwith2account {
                 continue;
             }
         }
+       
     }
 
     public static void purchaaseTotal(Scanner sc) {
@@ -274,21 +274,21 @@ public class pCashierwith2account {
                 System.out.println("|_______________________________________________|");
                 System.out.println("|          Name               |     Price       |");
                 System.out.println("|_____________________________|_________________|");
-                System.out.println("| 1. Promag                   |   Rp 20000      |");
-                System.out.println("| 2. Demacolin                |   Rp 35000      |");
-                System.out.println("| 3. Asam Mefenamat           |   Rp 59000      |");
-                System.out.println("| 4. Viticaimin               |   Rp 63000      |");
-                System.out.println("| 5. Neozep                   |   Rp 120000     |");
-                System.out.println("| 6. Panadol                  |   Rp 180000     |");
+                System.out.println("| 1. Promag                   |   Rp 2000       |");
+                System.out.println("| 2. Demacolin                |   Rp 3500       |");
+                System.out.println("| 3. Asam Mefenamat           |   Rp 5900       |");
+                System.out.println("| 4. Viticaimin               |   Rp 4000       |");
+                System.out.println("| 5. Neozep                   |   Rp 3300       |");
+                System.out.println("| 6. Panadol                  |   Rp 2500       |");
                 System.out.println("| 7. Paractemol               |   Rp 5000       |");
-                System.out.println("| 8. Menses                   |   Rp 2000       |");
-                System.out.println("| 9. Ambeven                  |   Rp 2000       |");
-                System.out.println("| 10. Mixagrib                |   Rp 2000       |");
-                System.out.println("| 11. Inpespa                 |   Rp 2000       |");
-                System.out.println("| 12. Antimo                  |   Rp 2000       |");
-                System.out.println("| 13. Ampicilin               |   Rp 2000       |");
-                System.out.println("| 14. EverE250                |   Rp 2000       |");
-                System.out.println("| 15. CENTERIZINE             |   Rp 2000       |");
+                System.out.println("| 8. Menses                   |   Rp 1500       |");
+                System.out.println("| 9. Ambeven                  |   Rp 3000       |");
+                System.out.println("| 10. Mixagrib                |   Rp 2500       |");
+                System.out.println("| 11. Inpespa                 |   Rp 3500       |");
+                System.out.println("| 12. Antimo                  |   Rp 4000       |");
+                System.out.println("| 13. Ampicilin               |   Rp 2500       |");
+                System.out.println("| 14. EverE250                |   Rp 4500       |");
+                System.out.println("| 15. CENTERIZINE             |   Rp 3500       |");
                 System.out.println("|_____________________________|_________________|");
                 System.out.println("");
 
@@ -397,29 +397,15 @@ public class pCashierwith2account {
 
     public static void paymentMethod(Scanner sc) {
         Scanner sc3 = new Scanner(System.in);
-        System.out.println("___________________PAYMENT METHOD_______________");
-        System.out.println("1. QRIS ");
-        System.out.println("2. Tunai");
         System.out.println("________________________________________________");
-        System.out.print("Choose payment method (1/2) :");
-        methodPayment = sc3.nextInt();
-        switch (methodPayment) {
-            case 1:
-                System.out.println();
-                System.out.println("________________________________________________");
-                System.out.println("----------------------QRIS----------------------");
-                System.out.println("________________________________________________");
-                System.out.println();
-                break;
+        System.out.println("===================PAYMENT METHOD===============");
+        System.out.println("________________________________________________");
+        System.out.println("                    QRIS / TUNAI                ");
+        System.out.println("________________________________________________");
+        System.out.print("Choose payment method (Qris/Tunai) :");
+        methodPayment = sc3.next();
 
-            case 2:
-                System.out.println();
-                System.out.println("________________________________________________");
-                System.out.println("---------------------TUNAI----------------------");
-                System.out.println("________________________________________________");
-                System.out.println();
-                break;
-        }
+        
     }
 
     public static void typeOfassurance(Scanner sc) {
@@ -436,19 +422,21 @@ public class pCashierwith2account {
 
             switch (assuranceType) {
                 case 1:
-                    discountPercetage = 0.10;
+                
+                    discountperList = 0.10;
+                    System.out.print("Allianz\n");
                     break;
                 case 2:
-                    discountPercetage = 0.20;
+                    discountperList = 0.20;
                     break;
                 case 3:
-                    discountPercetage = 0.30;
+                    discountperList = 0.30;
                     break;
                 case 4:
-                    discountPercetage = 0.40;
+                    discountperList = 0.40;
                     break;
                 case 5:
-                    discountPercetage = 0.00;
+                    discountperList = 0.00;
                     break;
                 default:
                     System.out.println("invalid assurance type");
@@ -457,19 +445,21 @@ public class pCashierwith2account {
             System.out.print("Input total price : ");
             totHarga = sc4.nextInt();
 
-            Discon = totHarga * discountPercetage;
-            totDisount = totHarga - Discon;
+            discount = totHarga * discountperList;
+            totDiscount = totHarga - discount;
 
             System.out.println();
             System.out.println("________________________________________________");
             System.out.println("Total kalkulasi harga barang    : Rp." + totHarga);
-            System.out.println("Total Diskon                    : Rp." + Discon);
-            System.out.println("Total yang harus anda bayar     : Rp." + totDisount);
+            System.out.println("Total Diskon                    : Rp." + discount);
+            System.out.println("Total yang harus anda bayar     : Rp." + totDiscount);
             System.out.println("________________________________________________");
             System.out.print("Jumlah uang yang diberikan      :  RP.");
             pembayaran = sc4.nextInt();
 
-            change = pembayaran - totDisount;
+            change = pembayaran - totDiscount;
+            System.out.println("Metode pembayaran               :     " + methodPayment);
+            System.out.println("tipe Asuransi                 :"+ discountperList);
             System.out.println("Kembalian Anda Sebesar          :  Rp." + change);
             System.out.println("________________________________________________");
             System.out.println("           Terimakasih atas kunjungannya.       ");
@@ -477,6 +467,7 @@ public class pCashierwith2account {
             System.out.println();
             break;
         }
+        
     }
 
     // Declration of displayManager
@@ -500,8 +491,8 @@ public class pCashierwith2account {
 
             switch (choose3) {
                 case 1:
-                    reportValue();
                     feedbackInput();
+                    reportValue();
                     break;
                 case 2:
                     System.out.println("BACK LOGIN MENU!");
@@ -510,12 +501,10 @@ public class pCashierwith2account {
                     System.out.println("Thank you for using our program!");
                     quit = true;
                     break;
-
                 default:
                     System.out.println("Pilihan anda Tidak valid , pilih 1-2");
                     break;
             }
-
         } while (!quit);
 
     }
@@ -549,5 +538,7 @@ public class pCashierwith2account {
                 pendapatanKasir[i] += totalPendapatanBulan;
             }
         }
+        
     }
+
 }
