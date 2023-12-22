@@ -10,8 +10,7 @@ public class pCashierwith2account {
 
     // DEKLARASI KALKULASI HARGA OBAT (FITUR 2)
     static int price = 0;
-    static int price_item[] = { 2000, 3500, 5900, 4000, 3300, 2500, 5000, 1500, 3000, 2500, 3500, 4000, 2500, 4500,
-            3500 };
+    static int price_item[] = { 2000, 3500, 5900, 4000, 3300, 2500, 5000, 1500, 3000, 2500, 3500, 4000, 2500, 4500, 3500 };
     static String menu = null;
     static String selected;
     static int total;
@@ -260,7 +259,6 @@ public class pCashierwith2account {
                 continue;
             }
         }
-       
     }
 
     public static void purchaaseTotal(Scanner sc) {
@@ -301,78 +299,78 @@ public class pCashierwith2account {
                 System.out.println("________________________________________________");
 
                 if (input_item == 1) {
-                    menu = " mefinal ";
+                    menu = " promag ";
                     price = price + price_item[0] * amount;
                     total = price_item[0] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
 
                 } else if (input_item == 2) {
-                    menu = "promag ";
+                    menu = " Demacolin ";
                     price = price + price_item[1] * amount;
                     total = price_item[1] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 3) {
-                    menu = " vitacimin ";
+                    menu = " Asamnefenamat ";
                     price = price + price_item[2] * amount;
                     total = price_item[2] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 4) {
-                    menu = " antangin ";
+                    menu = " Vitacimin ";
                     price = price + price_item[3] * amount;
                     total = price_item[3] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 5) {
-                    menu = " amoxcilin ";
+                    menu = " Neozep ";
                     price = price + price_item[4] * amount;
                     total = price_item[4] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 6) {
-                    menu = " madu tj ";
+                    menu = " panadol ";
                     price = price + price_item[5] * amount;
                     total = price_item[5] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 7) {
-                    menu = " Handsaplast ";
+                    menu = " Paracetamol ";
                     price = price + price_item[6] * amount;
                     total = price_item[6] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 8) {
-                    menu = " Obat penambah darah ";
+                    menu = " Menses ";
                     price = price + price_item[7] * amount;
                     total = price_item[7] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 9) {
-                    menu = " Obat penambah darah ";
+                    menu = " Ambeven ";
                     price = price + price_item[8] * amount;
                     total = price_item[8] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 10) {
-                    menu = " Obat penambah darah ";
+                    menu = " Mixagrib ";
                     price = price + price_item[9] * amount;
                     total = price_item[9] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 11) {
-                    menu = " Obat penambah darah ";
+                    menu = " Insepsa ";
                     price = price + price_item[10] * amount;
                     total = price_item[10] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 12) {
-                    menu = " Obat penambah darah ";
+                    menu = " Antimo ";
                     price = price + price_item[11] * amount;
                     total = price_item[11] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 13) {
-                    menu = " Obat penambah darah ";
+                    menu = " Ampicilin ";
                     price = price + price_item[12] * amount;
                     total = price_item[12] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 14) {
-                    menu = " Obat penambah darah ";
+                    menu = " EverE250 ";
                     price = price + price_item[13] * amount;
                     total = price_item[13] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
                 } else if (input_item == 15) {
-                    menu = " Obat penambah darah ";
+                    menu = " Centerizine ";
                     price = price + price_item[14] * amount;
                     total = price_item[14] * amount;
                     System.out.println("Your Order Menu : " + menu + "    x" + amount + "   |  Rp. " + total);
@@ -382,7 +380,7 @@ public class pCashierwith2account {
                 System.out.print("Would you like to order again? ? (Y/T) : ");
                 selected = sc2.next();
             }
-
+            
             paying = price;
 
             System.out.println();
@@ -404,8 +402,6 @@ public class pCashierwith2account {
         System.out.println("________________________________________________");
         System.out.print("Choose payment method (Qris/Tunai) :");
         methodPayment = sc3.next();
-
-        
     }
 
     public static void typeOfassurance(Scanner sc) {
@@ -418,13 +414,13 @@ public class pCashierwith2account {
             System.out.println("4. PRUDENTIAL");
             System.out.println("5. Not have assurance");
             System.out.print("CHOOSE MENU ASSURANCE TYPE (1/2/3/4/5) : ");
+            
             assuranceType = sc4.nextInt();
 
+            
             switch (assuranceType) {
                 case 1:
-                
                     discountperList = 0.10;
-                    System.out.print("Allianz\n");
                     break;
                 case 2:
                     discountperList = 0.20;
@@ -456,10 +452,8 @@ public class pCashierwith2account {
             System.out.println("________________________________________________");
             System.out.print("Jumlah uang yang diberikan      :  RP.");
             pembayaran = sc4.nextInt();
-
             change = pembayaran - totDiscount;
             System.out.println("Metode pembayaran               :     " + methodPayment);
-            System.out.println("tipe Asuransi                 :"+ discountperList);
             System.out.println("Kembalian Anda Sebesar          :  Rp." + change);
             System.out.println("________________________________________________");
             System.out.println("           Terimakasih atas kunjungannya.       ");
